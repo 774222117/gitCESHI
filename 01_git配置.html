@@ -78,8 +78,9 @@
         // git remote add origin 仓库地址
         // 连接到仓库之后，并不知道本地的哪个分支连接到了仓库的哪一个分支
         // 1.所以使用git pull origin master(如果仓库分支是main，就把master换成main)
-        // 2.或者先指定一个上游分支git branch --set-upstream-to=origin/master(如果仓库分支是main，就把master换成main),然后再git pull
-        // 添加之后先git pull origin master --allow-unrelated-histories   (是允许不相关的历史合并)
+        // 2.或者先指定一个上游分支git branch --set-upstream-to=origin/master(如果仓库分支是main，就把master换成main)
+        // 3.然后再git merge --allow-unrelated-histories(是允许不相关的历史合并)
+        // 4.最后一步：git push origin HEAD:master(如果仓库分支是main，就把master换成main)
 
         // 14.获取远程仓库的代码
         // git fetch 只是把代码拿下来在本地仓库里面
