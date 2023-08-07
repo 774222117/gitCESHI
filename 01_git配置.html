@@ -82,8 +82,7 @@
         // 2.或者先指定一个上游分支git branch --set-upstream-to=origin/master(如果仓库分支是main，就把master换成main)
         // 3.然后再git merge --allow-unrelated-histories(是允许不相关的历史合并)
         // 4.最后一步：git push origin HEAD:master(如果仓库分支是main，就把master换成main)如果git push不上去继续使用git push origin HEAD:master,或者git add .然后git commit -m "提交说明"，然后git push origin HEAD:master(如果仓库分支是main，就把master换成main)
-        // 5.如果git push不上去  输入git config push.default upstream
-
+        // 5.如果git push不上去  输入git config push.default upstream  (将upstream改成current)
         // 14.获取远程仓库的代码
         // git fetch 从远处仓库获取代码
         // git merge 合并代码，将本地仓库代码和远程仓库代码合并
