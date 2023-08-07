@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <h2>我是测试的标题</h2>
+    <p>我是内容，啊哈哈哈</p>
+    <a href="www.baidu.com"></a>
+    <script src="./js/abc.js"></script>
+    <script>
+        // !!!!vscode打开终端，在右边有个+号，切换到git bash  然后cd到对应的路径
+
+        // 1.安装git之后，配置信息 在git bash中输入
+        // git config --global user.name "Your Name"
+        // git config --global user.email "
+        // 设置之后在C:\Users\用户名\.gitconfig文件中可以看到配置信息
+        // 或者输入git config --list查看配置信息
+
+        // 2.创建版本库
+        // 2.1.创建一个空目录，cd到目录下，然后输入git init(在目录下会生成一个.git的隐藏文件)
+
+        // 3.把文件添加到版本库
+        // git add . (把当前目录下的所有文件添加到版本库)   ！！！！是暂缓状态（将新增或者修改的文件添加到暂缓）,不是提交到本地仓库
+        // 或者 git add 文件名 (把指定文件添加到版本库)  比如 git add js/abc.js
+
+        // 4.git commit -m "提交说明" (把文件提交到版本库)  !!!!提交到本地仓库
+        
+        // 上面的两步可以合并为一步！！！
+        // !!!!或者git commit -a -m "提交说明"  (把文件提交到版本库)  !!!!提交到本地仓库
+
+       // 5.查看状态
+        // git log (查看提交日志) ！！！然后按Q退出
+        // git log --pretty=oneline (查看提交日志) ！！！然后按Q退出 更简洁的查看
+        // git log --pretty=oneline --graph (查看提交日志) ！！！然后按Q退出 更简洁的查看  带图形的 (多分支的时候可以看到分支合并图)
+
+        // 6.克隆项目
+        // git clone 项目地址 (注意克隆的路径)
+
+        // 7.查看提交状态
+        // git status  可以查看已暂存或者没有暂存的文件
+        // git status -s 比上面的更简洁   前面的M表示修改过，后面的M表示已暂存，后面的??表示未暂存
+
+        // 8.   .gitignore文件
+        // 里面的内容是不需要提交到版本库的文件，比如node_modules文件夹，可以在里面写node_modules/，这样就不会提交到版本库了
+        // 一般不需要自己手动配置，脚手架自带
+
+        // 9.版本回退
+        // git reset --hard HEAD^  回退到上一个版本
+        // git reset --hard HEAD^^  回退到上上个版本
+        // git reset --hard HEAD~100  回退到上100个版本
+        // git reset --hard 版本号(取前8位就行)  回退到指定版本号
+
+        // 10.查看所有操作记录
+        // git reflog
+        // 如果回退版本错误，可以在git reflog中找到之前的版本号，然后再回退到正确的版本
+
+        // 特殊1.1:查看凭证管理器(默认安装git会自带凭证管理器)
+        // git config credential.helper  如果返回的是manageer-core，那么就是git的凭证管理器
+
+        // 特殊1.2:设置公钥私钥(如果是clone HTTPS地址就不需要，如果是SSH地址就需要)
+        // 两种ssh方法  任选其一
+        // ssh-keygen -t rsa -C "邮箱地址"  一路回车就行，然后在C:\Users\用户名\.ssh目录下可以看到公钥私钥
+        // ssh-keygen -t ed25519 -C "邮箱地址"  一路回车就行，然后在C:\Users\用户名\.ssh目录下可以看到公钥私钥
+        // 然后在github设置中添加公钥，就可以免密提交了
+
+        // 11.git push (clone下来的项目直接git push就行)
+        // git push origin master  (把本地仓库的内容推送到远程仓库)  origin是远程仓库的别名，master是分支名
+
+        // 12.在终端查看远程仓库地址
+        // git remote -vcd
+
+        // 13.在终端添加远程仓库地址
+        // git remote add origin 仓库地址
+        // 添加之后先git pull origin master --allow-unrelated-histories   (是允许不相关的历史合并)
+
+        // 14.获取远程仓库的代码
+        // git fetch 只是把代码拿下来在本地仓库里面
+        // git merge 是将拿下来的代码并且代码才会出现，所以直接git pull就行
+        // git pull = git fetch + git merge
+        // 平时直接git pull就行(推荐)
+        // git pull origin master  (从远程仓库拉取代码并合并到本地仓库)  origin是远程仓库的别名，master是分支名
+
+        
+
+
+    </script>
+</body>
+</html>
