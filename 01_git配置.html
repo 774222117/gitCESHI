@@ -82,7 +82,7 @@
         // 2.或者先指定一个上游分支git branch --set-upstream-to=origin/master(如果仓库分支是main，就把master换成main)
         // 3.然后再git merge --allow-unrelated-histories(是允许不相关的历史合并)
         // 4.最后一步：git push origin HEAD:master(如果仓库分支是main，就把master换成main)如果git push不上去继续使用git push origin HEAD:master,或者git add .然后git commit -m "提交说明"，然后git push origin HEAD:master(如果仓库分支是main，就把master换成main)
-        // 5.如果git push不上去  输入git config push.default upstream  (将upstream改成current)
+        // 5.如果git push不上去  输入git config push.default upstream  (如果新建了分支，将upstream改成current，然后git push)
         // 14.获取远程仓库的代码
         // git fetch 从远处仓库获取代码
         // git merge 合并代码，将本地仓库代码和远程仓库代码合并
@@ -90,7 +90,18 @@
         // 平时直接git pull就行(推荐)
         // git pull origin master  (从远程仓库拉取代码并合并到本地仓库)  origin是远程仓库的别名，master是分支名
 
-        
+        // git tag v1.0.0  打标签
+        // git tag  查看标签
+        // git tag -a v1.0.0 -m "说明"  打标签并添加说明
+        // 注意，先git tag  ，然后git push origin v1.0.0  推送标签到远程仓库(版本号输入git tag查看的版本号)
+        // 删除tag ： git tag -d v1.0.0
+        // 删除远程仓库tag： git push origin -d v1.0.0
+        // git checkout v1.0.0  切换到标签的版本
+
+        // 14.新建分支以及切换分支
+        // git branch test  创建test分支
+        // git branch  查看分支
+        // git checkout test  切换到test分支
 
 
     </script>
