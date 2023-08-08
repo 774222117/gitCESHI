@@ -104,13 +104,14 @@
         // git branch test  创建test分支
         // git branch  查看分支
         // git checkout test  切换到test分支
-        // 新建新分支的同时并切换过去: git checkout -b test  (test是分支名)
+        // !!!!!新建新分支的同时并切换过去: git checkout -b test  (test是分支名)
         // git push --set-upstream origin test  推送分支到远程仓库(test是分支名)
         // 利用“git branch --delete dev”命令删除本地分支
 
-        
+
         // 业务场景：当前开发的项目进行到了一半，之前的版本出了bug，要去修复bug然后回来继续开发
-        // 解决步骤：
+        // 解决步骤：1.先git checkout (分支版本号git tag查看)，2.然后新建一个分支(git checkout -b test  (test是分支名)),3.然后修复,修复完毕
+        // 之后，再打一个tag(git tag v1.0.1),4.然后切回到之前的分支(git checkout testing(testing是之前的分支)),5.然后git merge hotfix(合并分支,hotfix是修复bug的分支名),然后对比代码进行合并，6.
 
     </script>
 </body>
