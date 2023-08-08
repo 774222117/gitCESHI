@@ -83,6 +83,8 @@
         // 3.然后再git merge --allow-unrelated-histories(是允许不相关的历史合并)
         // 4.最后一步：git push origin HEAD:master(如果仓库分支是main，就把master换成main)如果git push不上去继续使用git push origin HEAD:master,或者git add .然后git commit -m "提交说明"，然后git push origin HEAD:master(如果仓库分支是main，就把master换成main)
         // 5.如果git push不上去  输入git config push.default upstream  (如果新建了分支，将upstream改成current，然后git push)
+
+
         // 14.获取远程仓库的代码
         // git fetch 从远处仓库获取代码
         // git merge 合并代码，将本地仓库代码和远程仓库代码合并
@@ -102,7 +104,11 @@
         // git branch test  创建test分支
         // git branch  查看分支
         // git checkout test  切换到test分支
+        // 切换新分支的同时并切换过去: git checkout -b test  (test是分支名)
 
+
+        // 业务场景：当前开发的项目进行到了一半，之前的版本出了bug，要去修复bug然后回来继续开发
+        // 解决步骤：
 
     </script>
 </body>
