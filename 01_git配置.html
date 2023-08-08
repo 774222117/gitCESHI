@@ -95,7 +95,7 @@
         // git tag v1.0.0  打标签
         // git tag  查看标签
         // git tag -a v1.0.0 -m "说明"  打标签并添加说明
-        // 注意，先git tag  ，然后git push origin v1.0.0  推送标签到远程仓库(版本号输入git tag查看的版本号)
+        // 注意(!!)，先git tag  ，然后执行上一步，再git push origin v1.0.0  推送标签到远程仓库(版本号输入git tag查看的版本号)
         // 删除tag ： git tag -d v1.0.0
         // 删除远程仓库tag： git push origin -d v1.0.0
         // git checkout v1.0.0  切换到标签的版本
@@ -105,6 +105,7 @@
         // git branch  查看分支
         // git checkout test  切换到test分支
         // 切换新分支的同时并切换过去: git checkout -b test  (test是分支名)
+        // git push --set-upstream origin test  推送分支到远程仓库(test是分支名)
 
 
         // 业务场景：当前开发的项目进行到了一半，之前的版本出了bug，要去修复bug然后回来继续开发
